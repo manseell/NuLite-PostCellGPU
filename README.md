@@ -78,3 +78,9 @@ wsi: Union[WSI,WSIMetadata]
 # DOPO
 wsi: WSI
 ```
+
+
+Nota a margine. Per verificare che effettivamente sia usato il post processing GPU in postprocess_cupy.py è stata aggiunta la seguente riga:
+```python
+print(f"[GPU POST-PROC] input type: {type(pred_inst)}, is cupy: {isinstance(pred_inst, cp.ndarray)}")
+```
